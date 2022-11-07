@@ -1,4 +1,5 @@
 public class Main {
+
     public static void main(String[] args) {
 //  МАССИВЫ !!!
         System.out.println(" *****  HomeWork#8 - Arrays ! *****");
@@ -44,5 +45,31 @@ public class Main {
         }
         System.out.println(" - все нечётные числа сделали чётными (+1)");
 
+// part 2
+//        int[] arr = generateRandomArray();
+
+//        public static int[] generateRandomArray() {
+            java.util.Random random = new java.util.Random();
+            int[] arr = new int[30];
+            for ( i = 0; i < arr.length; i++) {
+                arr[i] = random.nextInt(100_000) + 100_000;
+            }
+//            return arr;
+ //       }
+        System.out.println("\nпроверяем, чем ГСЧ заполнил наш массив ");
+            for (j=0; j<3; j++) {
+                for (i=10*j; i<(10*(j+1)); i++)  System.out.print(arr[i]+" ");
+                System.out.println();
+            }
+
+            int payMin = 200_000;
+            int payMax = 100_000;
+            for (i=0; i<30; i++) {
+                if (arr[i] < payMin) payMin = arr[i];
+                if (arr[i] > payMax) payMax = arr[i];
+
+}
+        System.out.println("Минимальная сумма трат за день составила "+ payMin +" рублей");
+        System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
     }
 }
