@@ -69,7 +69,7 @@ public class Main {
                 if (arr[i] > payMax) payMax = arr[i];
 
 }
-        System.out.println("Минимальная сумма трат за день составила "+ payMin +" рублей");
+        System.out.println("\nМинимальная сумма трат за день составила "+ payMin +" рублей");
         System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
     }
 }
