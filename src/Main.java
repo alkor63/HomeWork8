@@ -62,7 +62,6 @@ public class Main {
                 for (i=10*j; i<(10*(j+1)); i++)  System.out.print(arr[i]+" ");
                 System.out.println();
             }
-
             int payMin = 200_000;
             int payMax = 100_000;
             for (i=0; i<30; i++) {
