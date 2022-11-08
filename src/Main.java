@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -62,14 +64,53 @@ public class Main {
                 for (i=10*j; i<(10*(j+1)); i++)  System.out.print(arr[i]+" ");
                 System.out.println();
             }
+            int paySum = 0;
             int payMin = 200_000;
             int payMax = 100_000;
             for (i=0; i<30; i++) {
+                paySum = paySum + arr[i];
                 if (arr[i] < payMin) payMin = arr[i];
                 if (arr[i] > payMax) payMax = arr[i];
-
-}
+            }
+            double averagePay = paySum*1.0 / arr.length;
+        System.out.println("\nСумма трат за месяц составила "+paySum+" рублей");
         System.out.println("\nМинимальная сумма трат за день составила "+ payMin +" рублей");
         System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
+        System.out.println("\nСредняя сумма трат за месяц составила "+averagePay+" рублей");
+
+// *** задачки со звёздочкапми ***
+
+// создать матрицу 3х3
+// обе диагонали заполнить "1" (в одном цикле)
+//  если индексы матрицы i и j, то одна диагональ (i=j), а вторая (i+j) = maxIndex = .lenght-1
+//
+//
+        int[] arr1 = {5, 4, 3, 2, 1};
+        int[] arr2 = new int[5];
+        int maxIndex = arr1.length-1;
+        for (i=0; i<=maxIndex; i++)
+            arr2[i] = arr1[maxIndex-i];
+        System.out.println("\n задача 6. Начальный массив:");
+        System.out.println(Arrays.toString(arr1));
+        System.out.println("после реверса в другой массив:");
+        System.out.println(Arrays.toString(arr2));
+        int k = arr1.length/2;  // int даже при нечетном length
+        for (i=0; i<k; i++) {
+            int tmp = arr1[i];
+            arr1[i] = arr1[maxIndex-i];
+            arr1[maxIndex-i] = tmp;
+        }
+        System.out.println("Задача 7. Реверс с помощью дополнительной переменной tmp");
+        System.out.println(Arrays.toString(arr1));
+// Дан массив из 10 чисел. Найти пары чисел, дающих в сумме -2
+        int[] arr3 = {-6,2,5,-8,8,10,4,-7,12,1};
+        System.out.println("\nЗадача 8. Дан массив из 10 чисел:");
+        System.out.println(Arrays.toString(arr3));
+        System.out.println("Находим пары чисел, дающих в сумме -2");
+        for (i=0;i<arr3.length-1;i++){
+            for (j=i+1;j<arr3.length;j++){
+                if((arr3[i]+arr3[j]) == -2) System.out.println("сумма сисел "+arr3[i]+" и "+arr3[j]+" равна -2");
+            }
+        }
     }
 }
