@@ -37,18 +37,19 @@ public class Main {
         i = 7;
         for (; i>0 ; i--) System.out.print(chess[i]+", ");
         System.out.println(chess[i]);
-
+// все нечётные числа делаем чётными
+        System.out.println("\n odd numbers --> even (+1)");
         int j = nums.length;
         for (i = 0; i<(j) ; i++) {
-            if(nums[i]%2 != 0) nums[i] +=1;
-            System.out.print(nums[i]+", ");
+            if (nums[i] % 2 != 0) nums[i] += 1;
+            if (i < (j - 1)) System.out.print(nums[i] + ", ");
+            else System.out.println(nums[i]+" - все нечётные числа сделали чётными (+1)");
         }
-        System.out.println(" - все нечётные числа сделали чётными (+1)");
-
 // part 2
 //        int[] arr = generateRandomArray();
-
 //        public static int[] generateRandomArray() {
+// так и не понял как этот генератор случайных чисел (ГСЧ) сделать "на уровне main"
+// поэтому запустил ГСЧ внутри main
             java.util.Random random = new java.util.Random();
             int[] arr = new int[30];
             for ( i = 0; i < arr.length; i++) {
