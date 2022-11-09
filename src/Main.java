@@ -73,6 +73,22 @@ public class Main {
         System.out.println("\nМинимальная сумма трат за день составила "+ payMin +" рублей");
         System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
         System.out.println("\nСредняя сумма трат за месяц составила "+averagePay+" рублей");
+// Вариант решения с foreach
+        System.out.println("То же решение через foreach");
+        paySum = 0;
+        payMin = 200_000;
+        payMax = 100_000;
+        for (int payDay : arr) {
+            paySum += payDay;
+            if (payDay < payMin) payMin = payDay;
+            if (payDay > payMax) payMax = payDay;
+        }
+        averagePay = paySum*1.0 / arr.length;
+        System.out.println("\nСумма трат за месяц составила "+paySum+" рублей");
+        System.out.println("\nМинимальная сумма трат за день составила "+ payMin +" рублей");
+        System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
+        System.out.println("\nСредняя сумма трат за месяц составила "+averagePay+" рублей");
+
 // Задача 4 - реверсировать строки (ряд символов)
 
 // *** задачки со звёздочкапми ***
@@ -81,7 +97,7 @@ public class Main {
 //  если индексы матрицы i и j, то одна диагональ (i=j), а вторая (i+j) = maxIndex = .lenght-1
         System.out.println("Создаем матрицу 3х3 с диагоналями из 1");
         int mSize = 3;
-        int matrix3[][] = new int[mSize][mSize];
+        int matrix3[][] = new int[3][3];
         for (i=0; i<mSize; i++) {
             for (j=0; j<mSize; j++) {
                 if (i==j || (i+j)==(mSize-1))
