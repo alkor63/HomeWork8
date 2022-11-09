@@ -90,12 +90,26 @@ public class Main {
         System.out.println("\nСредняя сумма трат за месяц составила "+averagePay+" рублей");
 
 // Задача 4 - реверсировать строки (ряд символов)
+        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        System.out.println("\nЗадача 4.");
+        System.out.println("Реверс строки символлов с помощью дополнительной переменной tmpСр");
+        System.out.println("Было:");
+        System.out.println(Arrays.toString(reverseFullName));
+        int k = reverseFullName.length/2;  // int даже при нечетном length
+        int maxIndex = reverseFullName.length-1;
+        for (i=0; i<k; i++) {
+            char tmpCh = reverseFullName[i];
+            reverseFullName[i] = reverseFullName[maxIndex-i];
+            reverseFullName[maxIndex-i] = tmpCh;
+        }
+        System.out.println("стало:");
+        System.out.println(Arrays.toString(reverseFullName));
 
 // *** задачки со звёздочкапми ***
 // создать матрицу 3х3
 // обе диагонали заполнить "1" (в одном цикле)
 //  если индексы матрицы i и j, то одна диагональ (i=j), а вторая (i+j) = maxIndex = .lenght-1
-        System.out.println("Создаем матрицу 3х3 с диагоналями из 1");
+        System.out.println("\nСоздаем матрицу 3х3 с диагоналями из 1");
         int mSize = 3;
         int matrix3[][] = new int[3][3];
         for (i=0; i<mSize; i++) {
@@ -130,14 +144,14 @@ public class Main {
 //
         int[] arr1 = {5, 4, 3, 2, 1};
         int[] arr2 = new int[5];
-        int maxIndex = arr1.length-1;
+        maxIndex = arr1.length-1;
         for (i=0; i<=maxIndex; i++)
             arr2[i] = arr1[maxIndex-i];
         System.out.println("\n задача 6. Начальный массив:");
         System.out.println(Arrays.toString(arr1));
         System.out.println("после реверса в другой массив:");
         System.out.println(Arrays.toString(arr2));
-        int k = arr1.length/2;  // int даже при нечетном length
+        k = arr1.length/2;  // int даже при нечетном length
         for (i=0; i<k; i++) {
             int tmp = arr1[i];
             arr1[i] = arr1[maxIndex-i];
