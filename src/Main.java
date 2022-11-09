@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
 
@@ -19,30 +20,25 @@ public class Main {
         for (; i<2 ; i++) System.out.print(nums[i]+", ");
         System.out.println(nums[i]);
 
-        i = 0;
-        for (; i<2 ; i++) System.out.print(floats[i]+", ");
+        for (i = 0; i<2 ; i++) System.out.print(floats[i]+", ");
         System.out.println(floats[i]);
 
-        i = 0;
-        for (; i<7 ; i++) System.out.print(chess[i]+", ");
+        for (i = 0; i<7 ; i++) System.out.print(chess[i]+", ");
         System.out.println(chess[i]);
 // reverse printing
         System.out.println("reverse printing of arrays");
-        i = 2;
-        for (; i>0 ; i--) System.out.print(nums[i]+", ");
+        for (i = 2; i>0 ; i--) System.out.print(nums[i]+", ");
         System.out.println(nums[i]);
 
-        i = 2;
-        for (; i>0 ; i--) System.out.print(floats[i]+", ");
+        for (i = 2; i>0 ; i--) System.out.print(floats[i]+", ");
         System.out.println(floats[i]);
 
-        i = 7;
-        for (; i>0 ; i--) System.out.print(chess[i]+", ");
+        for (i = 7; i>0 ; i--) System.out.print(chess[i]+", ");
         System.out.println(chess[i]);
 // все нечётные числа делаем чётными
         System.out.println("\n odd numbers --> even (+1)");
         int j = nums.length;
-        for (i = 0; i<(j) ; i++) {
+        for (i = 0; i<j ; i++) {
             if (nums[i] % 2 != 0) nums[i] += 1;
             if (i < (j - 1)) System.out.print(nums[i] + ", ");
             else System.out.println(nums[i]+" - все нечётные числа сделали чётными (+1)");
@@ -58,7 +54,7 @@ public class Main {
                 arr[i] = random.nextInt(100_000) + 100_000;
             }
 //            return arr;
- //       }
+//        }
         System.out.println("\nпроверяем, чем ГСЧ заполнил наш массив ");
             for (j=0; j<3; j++) {
                 for (i=10*j; i<(10*(j+1)); i++)  System.out.print(arr[i]+" ");
@@ -78,11 +74,43 @@ public class Main {
         System.out.println("Максимальная сумма трат за день составила "+ payMax +" рублей");
         System.out.println("\nСредняя сумма трат за месяц составила "+averagePay+" рублей");
 // Задача 4 - реверсировать строки (ряд символов)
+
 // *** задачки со звёздочкапми ***
 // создать матрицу 3х3
 // обе диагонали заполнить "1" (в одном цикле)
 //  если индексы матрицы i и j, то одна диагональ (i=j), а вторая (i+j) = maxIndex = .lenght-1
-//
+        System.out.println("Создаем матрицу 3х3 с диагоналями из 1");
+        int mSize = 3;
+        int matrix3[][] = new int[mSize][mSize];
+        for (i=0; i<mSize; i++) {
+            for (j=0; j<mSize; j++) {
+                if (i==j || (i+j)==(mSize-1))
+                    matrix3[i][j] = 1;
+                else  matrix3[i][j] = 0;
+            }
+        }
+        for (int[] row:matrix3){
+            for (int column:row){
+                System.out.print(column+" ");
+            }
+            System.out.println();
+        }
+        System.out.println("Усложним задачу.\n теперь матрица 10х10 из цифр 1 с 8 в диагоналях");
+        mSize = 10;
+        int matrix1[][] = new int[mSize][mSize];
+        for (i=0; i<mSize; i++) {
+            for (j=0; j<mSize; j++) {
+                if (i==j || (i+j)==(mSize-1))
+                    matrix1[i][j] = 8;
+                else  matrix1[i][j] = 1;
+            }
+        }
+        for (int[] row:matrix1){
+            for (int column:row){
+                System.out.print(column+" ");
+            }
+            System.out.println();
+        }
 //
         int[] arr1 = {5, 4, 3, 2, 1};
         int[] arr2 = new int[5];
@@ -108,7 +136,7 @@ public class Main {
         System.out.println("Находим пары чисел, дающих в сумме -2");
         for (i=0;i<arr3.length-1;i++){
             for (j=i+1;j<arr3.length;j++){
-                if((arr3[i]+arr3[j]) == -2) System.out.println("сумма сисел "+arr3[i]+" и "+arr3[j]+" равна -2");
+                if((arr3[i]+arr3[j]) == -2) System.out.println("сумма чисел "+arr3[i]+" и "+arr3[j]+" равна -2");
             }
         }
     }
