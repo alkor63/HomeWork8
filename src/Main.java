@@ -5,44 +5,8 @@ public class Main {
 
     public static void main(String[] args) {
 //  МАССИВЫ !!!
-        System.out.println(" *****  HomeWork#8 - Arrays ! *****");
-// задача 1 - объявляем массивы, заполняем ячейки
-        int [] nums = new int [3];
-        nums[0] = 1;
-        nums[1] = 2;
-        nums[2] = 3;
-        double [] floats = {1.57, 7.654, 9.986};
-        char [] chess = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
-// выводимс в консоль содержитмое массивов
-// arrays printing
-        System.out.println("*** arrays printing ***");
-        int i = 0;
-        for (; i<2 ; i++) System.out.print(nums[i]+", ");
-        System.out.println(nums[i]);
-
-        for (i = 0; i<2 ; i++) System.out.print(floats[i]+", ");
-        System.out.println(floats[i]);
-
-        for (i = 0; i<7 ; i++) System.out.print(chess[i]+", ");
-        System.out.println(chess[i]);
-// reverse printing
-        System.out.println("reverse printing of arrays");
-        for (i = 2; i>0 ; i--) System.out.print(nums[i]+", ");
-        System.out.println(nums[i]);
-
-        for (i = 2; i>0 ; i--) System.out.print(floats[i]+", ");
-        System.out.println(floats[i]);
-
-        for (i = 7; i>0 ; i--) System.out.print(chess[i]+", ");
-        System.out.println(chess[i]);
-// все нечётные числа делаем чётными
-        System.out.println("\n odd numbers --> even (+1)");
-        int j = nums.length;
-        for (i = 0; i<j ; i++) {
-            if (nums[i] % 2 != 0) nums[i] += 1;
-            if (i < (j - 1)) System.out.print(nums[i] + ", ");
-            else System.out.println(nums[i]+" - все нечётные числа сделали чётными (+1)");
-        }
+        System.out.println(" *****  HomeWork#8 - Arrays - par 2 *****");
+        int i, j;
 // part 2
 //        int[] arr = generateRandomArray();
 //        public static int[] generateRandomArray() {
@@ -92,7 +56,7 @@ public class Main {
 // Задача 4 - реверсировать строки (ряд символов)
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println("\nЗадача 4.");
-        System.out.println("Реверс строки символлов с помощью дополнительной переменной tmpСр");
+        System.out.println("Реверс строки символлов с помощью дополнительной переменной tmpCh");
         System.out.println("Было:");
         System.out.println(Arrays.toString(reverseFullName));
         int k = reverseFullName.length/2;  // int даже при нечетном length
