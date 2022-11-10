@@ -1,6 +1,4 @@
 import java.util.Arrays;
-//import java.util.Random;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -8,17 +6,7 @@ public class Main {
         System.out.println(" ******  HomeWork#8 - Arrays - par 2 ******");
         int i, j;
 // part 2
-//        int[] arr = generateRandomArray();
-//        public static int[] generateRandomArray() {
-// так и не понял как этот генератор случайных чисел (ГСЧ) сделать "на уровне main"
-// поэтому запустил ГСЧ внутри main
-            java.util.Random random = new java.util.Random();
-            int[] arr = new int[30];
-            for ( i = 0; i < arr.length; i++) {
-                arr[i] = random.nextInt(100_000) + 100_000;
-            }
-//            return arr;
-//        }
+        int[] arr = generateRandomArray();
         System.out.println("\nпроверяем, чем ГСЧ заполнил наш массив ");
             for (j=0; j<3; j++) {
                 for (i=10*j; i<(10*(j+1)); i++)  System.out.print(arr[i]+" ");
@@ -149,4 +137,13 @@ public class Main {
             i++;
         }
     }
-}
+    public static int[] generateRandomArray() {
+        java.util.Random random = new java.util.Random();
+        int[] arr = new int[30];
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = random.nextInt(100_000) + 100_000;
+        }
+            return arr;
+        }
+
+    }
