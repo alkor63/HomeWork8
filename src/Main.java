@@ -56,11 +56,13 @@ public class Main {
 // Задача 4 - реверсировать строки (ряд символов)
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         System.out.println("\nЗадача 4.");
-        System.out.println("Реверс строки символлов с помощью дополнительной переменной tmpCh");
         System.out.println("Было:");
         System.out.println(Arrays.toString(reverseFullName));
-        int k = reverseFullName.length/2;  // int даже при нечетном length
+        System.out.println("Реверс строки символлов - печатаем массив в обратную сторону:");
         int maxIndex = reverseFullName.length-1;
+        for (i=maxIndex;i>=0;i--) System.out.print(reverseFullName[i]);
+        System.out.println("\nРеверс строки символлов с помощью дополнительной переменной tmpCh");
+        int k = reverseFullName.length/2;  // int даже при нечетном length
         for (i=0; i<k; i++) {
             char tmpCh = reverseFullName[i];
             reverseFullName[i] = reverseFullName[maxIndex-i];
@@ -132,6 +134,19 @@ public class Main {
             for (j=i+1;j<arr3.length;j++){
                 if((arr3[i]+arr3[j]) == -2) System.out.println("сумма чисел "+arr3[i]+" и "+arr3[j]+" равна -2");
             }
+        }
+        System.out.println("Если нужно найти одну пару чисел, дающих в сумме -2 и выйти");
+        boolean b = true;
+        i = 0;
+        while (b && i<arr3.length-1){
+            for (j=i+1;j<arr3.length;j++){
+                if((arr3[i]+arr3[j]) == -2) {
+                    System.out.println("сумма чисел " + arr3[i] + " и " + arr3[j] + " равна -2");
+                    b = false;
+                    break;
+                }
+            }
+            i++;
         }
     }
 }
