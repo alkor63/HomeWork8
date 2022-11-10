@@ -1,11 +1,11 @@
 import java.util.Arrays;
-import java.util.Random;
+//import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
 //  МАССИВЫ !!!
-        System.out.println(" *****  HomeWork#8 - Arrays - par 2 *****");
+        System.out.println(" ******  HomeWork#8 - Arrays - par 2 ******");
         int i, j;
 // part 2
 //        int[] arr = generateRandomArray();
