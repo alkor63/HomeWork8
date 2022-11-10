@@ -111,7 +111,7 @@ public class Main {
 //  если индексы матрицы i и j, то одна диагональ (i=j), а вторая (i+j) = maxIndex = .lenght-1
         System.out.println("\nСоздаем матрицу 3х3 с диагоналями из 1");
         int mSize = 3;
-        int matrix3[][] = new int[3][3];
+        int matrix3[][] = new int[mSize][mSize];
         for (i=0; i<mSize; i++) {
             for (j=0; j<mSize; j++) {
                 if (i==j || (i+j)==(mSize-1))
